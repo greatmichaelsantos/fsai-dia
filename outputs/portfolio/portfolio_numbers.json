@@ -1,0 +1,294 @@
+{
+ "area_km2": 3733.94,
+ "unmapped_5_25": [
+  "Candelaria",
+  "Masinloc",
+  "Palauig",
+  "Santa Cruz"
+ ],
+ "H1": {
+  "n": 10,
+  "median_5yr": 3.31604,
+  "median_100yr": 10.4385,
+  "median_diff_pp": 6.58553,
+  "median_diff_CI95": [
+   4.63,
+   8.45
+  ],
+  "W": 55.0,
+  "p_one_sided": 0.000976562,
+  "rank_biserial": 1.0
+ },
+ "H2": {
+  "n_wet_months": 276,
+  "n_dry_months": 274,
+  "median_wet_mm": 354.305,
+  "median_dry_mm": 21.5117,
+  "U": 74454.0,
+  "p_one_sided": 2.22046e-86,
+  "rank_biserial": 0.969057
+ },
+ "H3": {
+  "Botolan": {
+   "years": 45,
+   "tau": 0.319192,
+   "p_two_sided": 0.00199341,
+   "sen_mm_per_decade": 16.5871,
+   "sen_CI95_mm_per_decade": [
+    4.79333,
+    27.6
+   ]
+  },
+  "Candelaria": {
+   "years": 45,
+   "tau": 0.337374,
+   "p_two_sided": 0.00108581,
+   "sen_mm_per_decade": 13.706,
+   "sen_CI95_mm_per_decade": [
+    5.2,
+    23.8158
+   ]
+  },
+  "Santa Cruz": {
+   "years": 45,
+   "tau": 0.290909,
+   "p_two_sided": 0.0048428,
+   "sen_mm_per_decade": 14.3214,
+   "sen_CI95_mm_per_decade": [
+    4.26452,
+    25.3556
+   ]
+  }
+ },
+ "cluster_profiles": {
+  "C1": {
+   "flood_100yr_high_pct": 7.05,
+   "flood_100yr_any_pct": 17.61,
+   "ss_ssa4_any_pct": 7.9,
+   "n": 8
+  },
+  "C2": {
+   "flood_100yr_high_pct": 12.35,
+   "flood_100yr_any_pct": 28.66,
+   "ss_ssa4_any_pct": 0.91,
+   "n": 3
+  },
+  "C3": {
+   "flood_100yr_high_pct": 14.77,
+   "flood_100yr_any_pct": 47.47,
+   "ss_ssa4_any_pct": 14.77,
+   "n": 3
+  }
+ },
+ "rules_base_rate": 0.0283662,
+ "rules_top": [
+  {
+   "rule": "7-day rain \u2265200 mm + Extreme today + Jul\u2013Sep",
+   "support": 0.006,
+   "confidence": 0.454,
+   "lift": 15.998
+  },
+  {
+   "rule": "Extreme today + Humidity \u226588% + Jul\u2013Sep",
+   "support": 0.009,
+   "confidence": 0.449,
+   "lift": 15.815
+  },
+  {
+   "rule": "7-day rain \u2265200 mm + Extreme today + Humidity \u226588%",
+   "support": 0.006,
+   "confidence": 0.446,
+   "lift": 15.72
+  },
+  {
+   "rule": "Extreme today + Jul\u2013Sep",
+   "support": 0.009,
+   "confidence": 0.437,
+   "lift": 15.409
+  },
+  {
+   "rule": "Extreme today + Jul\u2013Sep + Wet season",
+   "support": 0.009,
+   "confidence": 0.437,
+   "lift": 15.409
+  },
+  {
+   "rule": "Extreme today + Jul\u2013Sep + Rain today \u226530 mm",
+   "support": 0.009,
+   "confidence": 0.437,
+   "lift": 15.409
+  }
+ ],
+ "roc_auc_hold": {
+  "Logistic regression": 0.916523,
+  "Linear Discriminant Analysis": 0.9102,
+  "Decision tree": 0.88112,
+  "MLP neural network": 0.915879,
+  "Climatology baseline": 0.822918
+ },
+ "final_cm": {
+  "TN": 5998,
+  "FP": 166,
+  "FN": 109,
+  "TP": 114
+ },
+ "cms": {
+  "Logistic regression": [
+   [
+    5998,
+    166
+   ],
+   [
+    109,
+    114
+   ]
+  ],
+  "Linear Discriminant Analysis": [
+   [
+    5971,
+    193
+   ],
+   [
+    109,
+    114
+   ]
+  ],
+  "Decision tree": [
+   [
+    5975,
+    189
+   ],
+   [
+    113,
+    110
+   ]
+  ],
+  "MLP neural network": [
+   [
+    6003,
+    161
+   ],
+   [
+    114,
+    109
+   ]
+  ]
+ },
+ "event": [
+  {
+   "date": "2026-08-15",
+   "PRECTOTCORR": 19.59,
+   "score": 0.689
+  },
+  {
+   "date": "2026-08-16",
+   "PRECTOTCORR": 33.25,
+   "score": 0.929
+  },
+  {
+   "date": "2026-08-17",
+   "PRECTOTCORR": 61.8,
+   "score": 0.99
+  },
+  {
+   "date": "2026-08-18",
+   "PRECTOTCORR": 48.55,
+   "score": 0.904
+  },
+  {
+   "date": "2026-08-19",
+   "PRECTOTCORR": 24.22,
+   "score": 0.731
+  },
+  {
+   "date": "2026-08-20",
+   "PRECTOTCORR": 10.64,
+   "score": 0.616
+  },
+  {
+   "date": "2026-08-21",
+   "PRECTOTCORR": 7.64,
+   "score": 0.397
+  },
+  {
+   "date": "2026-08-22",
+   "PRECTOTCORR": 13.39,
+   "score": 0.662
+  },
+  {
+   "date": "2026-08-23",
+   "PRECTOTCORR": 18.08,
+   "score": 0.689
+  },
+  {
+   "date": "2026-08-24",
+   "PRECTOTCORR": 19.64,
+   "score": 0.731
+  },
+  {
+   "date": "2026-08-25",
+   "PRECTOTCORR": 21.18,
+   "score": 0.753
+  },
+  {
+   "date": "2026-08-26",
+   "PRECTOTCORR": 15.41,
+   "score": 0.592
+  },
+  {
+   "date": "2026-08-27",
+   "PRECTOTCORR": 27.81,
+   "score": 0.855
+  },
+  {
+   "date": "2026-08-28",
+   "PRECTOTCORR": 83.78,
+   "score": 0.997
+  },
+  {
+   "date": "2026-08-29",
+   "PRECTOTCORR": 62.11,
+   "score": 0.936
+  },
+  {
+   "date": "2026-08-30",
+   "PRECTOTCORR": 47.42,
+   "score": 0.945
+  },
+  {
+   "date": "2026-08-31",
+   "PRECTOTCORR": 19.36,
+   "score": 0.641
+  },
+  {
+   "date": "2026-09-01",
+   "PRECTOTCORR": 16.03,
+   "score": 0.664
+  },
+  {
+   "date": "2026-09-02",
+   "PRECTOTCORR": 22.01,
+   "score": 0.72
+  },
+  {
+   "date": "2026-09-03",
+   "PRECTOTCORR": 21.47,
+   "score": 0.782
+  },
+  {
+   "date": "2026-09-04",
+   "PRECTOTCORR": 29.12,
+   "score": 0.851
+  },
+  {
+   "date": "2026-09-05",
+   "PRECTOTCORR": 44.27,
+   "score": 0.932
+  },
+  {
+   "date": "2026-09-06",
+   "PRECTOTCORR": 35.74,
+   "score": 0.736
+  }
+ ]
+}

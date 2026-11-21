@@ -1,6 +1,6 @@
 phase1_outputs/
 phase2_outputs/
-portfolio/
+/portfolio/
 data/raw/
 data/interim/
 *.zip
