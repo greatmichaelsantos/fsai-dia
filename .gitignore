@@ -1,0 +1,8 @@
+phase1_outputs/
+phase2_outputs/
+portfolio/
+data/raw/
+data/interim/
+*.zip
+__pycache__/
+.ipynb_checkpoints/

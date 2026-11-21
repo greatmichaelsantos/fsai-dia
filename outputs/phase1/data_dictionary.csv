@@ -1,0 +1,51 @@
+table,feature,description,dtype,unit,values_or_range,missing,role
+dia_hazard_by_lgu,lgu_name,"Municipality/city name (geoBoundaries ADM3, normalised)",object,-,"Botolan, Cabangan, Candelaria, Castillejos, Iba, Masinloc, Olongapo, Palauig …",0,Join key
+dia_hazard_by_lgu,hazard_type,NOAH hazard family (flood or storm_surge),object,-,"flood, storm_surge",0,Layer identity
+dia_hazard_by_lgu,scenario,Flood return period (5yr/25yr/100yr) or Storm Surge Advisory level (SSA1–SSA4),object,-,"100yr, 25yr, 5yr, SSA1, SSA2, SSA3, SSA4",0,Scenario selector on the map
+dia_hazard_by_lgu,hazard_level,"NOAH hazard class (flood `Var` / storm surge `HAZ`): 1 Low, 2 Medium, 3 High",int8,ordinal,1 – 3,0,Target/colour class
+dia_hazard_by_lgu,hazard_label,Text label of hazard_level,object,-,"High, Low, Medium",0,Legend
+dia_hazard_by_lgu,lgu_area_km2,LGU land area computed in EPSG:32651,float64,km²,72.98 – 669.1,0,Denominator for shares
+dia_hazard_by_lgu,area_km2,Area of the dissolved hazard polygon inside the LGU,float64,km²,0.1135 – 106.9,0,Exposure magnitude
+dia_hazard_by_lgu,share_of_lgu_pct,area_km2 / lgu_area_km2 × 100,float64,%,0.0343 – 48.67,0,Comparable exposure across LGUs
+lgu_features,lgu_name,"Municipality/city name (geoBoundaries ADM3, normalised)",object,-,"Botolan, Cabangan, Candelaria, Castillejos, Iba, Masinloc, Olongapo, Palauig …",0,Join key
+lgu_features,power_cell_group,Representative LGU of the POWER grid cell (LGUs sharing a cell share rainfall),object,-,"Botolan, Candelaria, Santa Cruz",0,Avoid double-counting rainfall
+lgu_features,centroid_lat,Interior point latitude (WGS84),float64,degrees,14.83 – 15.78,0,Map label / POWER query point
+lgu_features,centroid_lon,Interior point longitude (WGS84),float64,degrees,120 – 120.3,0,Map label / POWER query point
+lgu_features,lgu_area_km2,LGU land area computed in EPSG:32651,float64,km²,72.98 – 669.1,0,Denominator for shares
+lgu_features,flood_100yr_high_pct,% of LGU area in flood 100YR high hazard,float64,%,5.723 – 16.76,0,Exposure feature
+lgu_features,flood_100yr_low_pct,% of LGU area in flood 100YR low hazard,float64,%,1.51 – 17.89,0,Exposure feature
+lgu_features,flood_100yr_medium_pct,% of LGU area in flood 100YR medium hazard,float64,%,5.685 – 48.67,0,Exposure feature
+lgu_features,flood_25yr_high_pct,% of LGU area in flood 25YR high hazard,float64,%,0 – 12.1,0,Exposure feature
+lgu_features,flood_5yr_medium_pct,% of LGU area in flood 5YR medium hazard,float64,%,0 – 25.57,0,Exposure feature
+lgu_features,ss_ssa1_high_pct,% of LGU area in storm surge SSA1 high hazard,float64,%,0 – 1.118,0,Exposure feature
+lgu_features,ss_ssa1_low_pct,% of LGU area in storm surge SSA1 low hazard,float64,%,0 – 1.568,0,Exposure feature
+lgu_features,ss_ssa1_medium_pct,% of LGU area in storm surge SSA1 medium hazard,float64,%,0 – 2.275,0,Exposure feature
+lgu_features,ss_ssa2_low_pct,% of LGU area in storm surge SSA2 low hazard,float64,%,0 – 2.248,0,Exposure feature
+lgu_features,ss_ssa2_medium_pct,% of LGU area in storm surge SSA2 medium hazard,float64,%,0 – 4.172,0,Exposure feature
+lgu_features,ss_ssa3_low_pct,% of LGU area in storm surge SSA3 low hazard,float64,%,0 – 1.678,0,Exposure feature
+lgu_features,ss_ssa3_medium_pct,% of LGU area in storm surge SSA3 medium hazard,float64,%,0 – 4.719,0,Exposure feature
+lgu_features,ss_ssa4_low_pct,% of LGU area in storm surge SSA4 low hazard,float64,%,0 – 1.247,0,Exposure feature
+lgu_features,rain_mean_annual_mm,Mean annual rainfall (complete years),float64,mm/yr,2397 – 2649,0,Climatology
+lgu_features,rain_wetdays_per_year,Mean wet days (≥1 mm) per year,float64,days,190.2 – 192.9,0,Rain frequency
+rainfall_daily_clean,PRECTOTCORR,Bias-corrected total precipitation (NASA POWER),float64,mm/day,0 – 274.8,0,Primary flood driver
+rainfall_daily_clean,T2M,Air temperature at 2 m,float64,°C,18.94 – 32.06,0,Context / seasonality
+rainfall_daily_clean,RH2M,Relative humidity at 2 m,float64,%,53.47 – 95.38,0,Context / seasonality
+rainfall_daily_clean,lgu_name,"Municipality/city name (geoBoundaries ADM3, normalised)",object,-,"Botolan, Cabangan, Candelaria, Castillejos, Iba, Masinloc, Olongapo, Palauig …",0,Join key
+rainfall_daily_clean,date,Calendar day (POWER local solar time),datetime64[ns],date,"1981-01-01, 1981-01-02, 1981-01-03, 1981-01-04, 1981-01-05, 1981-01-06, 1981-01-07, 1981-01-08 …",0,Time key
+rainfall_daily_clean,flag_rain_extreme,"Rainfall above plausibility ceiling (kept, flagged)",bool,bool,False,0,Quality flag
+rainfall_daily_clean,imp_T2M,T2M imputed by time interpolation (gap ≤3 d),bool,bool,False,0,Quality flag
+rainfall_daily_clean,imp_RH2M,RH2M imputed by time interpolation (gap ≤3 d),bool,bool,False,0,Quality flag
+rainfall_daily_clean,imp_PRECTOTCORR,Rainfall value imputed from nearest distinct POWER cell,bool,bool,False,0,Exclude in sensitivity checks
+rainfall_daily_clean,year,Calendar year,int32,-,1981 – 2026,0,Trend analysis
+rainfall_daily_clean,month,Calendar month 1–12,int32,-,1 – 12,0,Seasonality
+rainfall_daily_clean,doy,Day of year 1–366,int32,-,1 – 366,0,Seasonality
+rainfall_daily_clean,season,"wet (May–Oct) / dry (Nov–Apr), Coronas Type I",object,-,"dry, wet",0,Seasonality
+rainfall_daily_clean,month_sin,sin(2π·month/12),float64,-,-1 – 1,0,Cyclical encoding
+rainfall_daily_clean,month_cos,cos(2π·month/12),float64,-,-1 – 1,0,Cyclical encoding
+rainfall_daily_clean,is_wet_day,PRECTOTCORR ≥ 1 mm,Int8,0/1,0 – 1,0,Rain frequency
+rainfall_daily_clean,rain_3d_mm,3-day antecedent rainfall total,float64,mm,0 – 589.4,28,Soil saturation proxy
+rainfall_daily_clean,rain_7d_mm,7-day antecedent rainfall total,float64,mm,0 – 826,84,Soil saturation proxy
+rainfall_daily_clean,rain_30d_mm,30-day antecedent rainfall total,float64,mm,0.19 – 1897,406,Seasonal wetness
+rainfall_daily_clean,is_extreme_day,Rain ≥ LGU's 95th percentile wet-day amount,Int8,0/1,0 – 1,0,Flood-trigger candidate
+rainfall_daily_clean,season_dry,One-hot of season,int8,0/1,0 – 1,0,Model input
+rainfall_daily_clean,season_wet,One-hot of season,int8,0/1,0 – 1,0,Model input

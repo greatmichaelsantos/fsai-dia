@@ -1,0 +1,13 @@
+geopandas>=1.0
+pyogrio>=0.7
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.5
+mlxtend>=0.23
+networkx>=3.2
+matplotlib>=3.8
+seaborn>=0.13
+huggingface_hub>=0.23
+requests>=2.31
+joblib>=1.3

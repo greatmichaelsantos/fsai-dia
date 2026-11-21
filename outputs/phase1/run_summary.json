@@ -1,0 +1,1065 @@
+{
+  "run_utc": "2026-11-16T07:00:19Z",
+  "config": {
+    "HF_REPO_ID": "bettergovph/project-noah-hazard-maps",
+    "AOI_KEYWORDS": [
+      "zambales",
+      "olongapo"
+    ],
+    "RETURN_PERIODS": [
+      "5yr",
+      "25yr",
+      "100yr"
+    ],
+    "INCLUDE_STORM_SURGE": true,
+    "GB_API": "https://www.geoboundaries.org/api/current/gbOpen/PHL/{lvl}/",
+    "POWER_URL": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "POWER_PARAMS": [
+      "PRECTOTCORR",
+      "T2M",
+      "RH2M"
+    ],
+    "POWER_START": "19810101",
+    "POWER_END": "20261102",
+    "EXPECTED_LGUS": [
+      "Botolan",
+      "Cabangan",
+      "Candelaria",
+      "Castillejos",
+      "Iba",
+      "Masinloc",
+      "Olongapo",
+      "Palauig",
+      "San Antonio",
+      "San Felipe",
+      "San Marcelino",
+      "San Narciso",
+      "Santa Cruz",
+      "Subic"
+    ],
+    "METRIC_CRS": "EPSG:32651",
+    "WEB_CRS": "EPSG:4326",
+    "SLIVER_M2": 1.0,
+    "SIMPLIFY_TOL_M": 5.0,
+    "WET_DAY_MM": 1.0,
+    "MAX_INTERP_DAYS": 3,
+    "RAIN_MAX_PLAUSIBLE": 1000.0,
+    "CORR_DROP": 0.95,
+    "WET_SEASON_MONTHS": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "LOCAL_DATA_DIR": null,
+    "SEQ3": [
+      "#86b6ef",
+      "#2a78d6",
+      "#104281"
+    ],
+    "CAT": [
+      "#2a78d6",
+      "#eb6834",
+      "#1baf7a",
+      "#eda100"
+    ]
+  },
+  "noah_repo_total_files": 594,
+  "noah_raw_profile": [
+    {
+      "kind": "flood",
+      "scenario": "100yr",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_Flood_100year.shp",
+      "rows": 3,
+      "columns": "Var, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    },
+    {
+      "kind": "flood",
+      "scenario": "25yr",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_Flood_25year.shp",
+      "rows": 3,
+      "columns": "Var, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    },
+    {
+      "kind": "flood",
+      "scenario": "5yr",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_Flood_5year.shp",
+      "rows": 3,
+      "columns": "Var, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA1",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_StormSurge_SSA1.shp",
+      "rows": 3,
+      "columns": "HAZ, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA2",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_StormSurge_SSA2.shp",
+      "rows": 3,
+      "columns": "HAZ, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA3",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_StormSurge_SSA3.shp",
+      "rows": 3,
+      "columns": "HAZ, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA4",
+      "zip": "Zambales.zip",
+      "shp": "Zambales_StormSurge_SSA4.shp",
+      "rows": 3,
+      "columns": "HAZ, hazard_type, scenario, src_file",
+      "crs": "EPSG:4326",
+      "crs_note": "from .prj",
+      "geom_types": "MultiPolygon"
+    }
+  ],
+  "aoi_lgu_count": 14,
+  "aoi_missing_vs_psa": [],
+  "aoi_extra_vs_psa": [],
+  "aoi_area_km2": 3733.94,
+  "power_units": {
+    "PRECTOTCORR": "mm/day",
+    "T2M": "C",
+    "RH2M": "%"
+  },
+  "eda_noah_raw_quality": [
+    {
+      "kind": "flood",
+      "scenario": "100yr",
+      "hazard_field": "Var",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 835.956,
+      "area_m2_median": 313702673.1,
+      "area_m2_p99": 354313530.2,
+      "crs": "EPSG:4326"
+    },
+    {
+      "kind": "flood",
+      "scenario": "25yr",
+      "hazard_field": "Var",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 398.946,
+      "area_m2_median": 141200747.8,
+      "area_m2_p99": 165357842.4,
+      "crs": "EPSG:4326"
+    },
+    {
+      "kind": "flood",
+      "scenario": "5yr",
+      "hazard_field": "Var",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 346.106,
+      "area_m2_median": 115607982.9,
+      "area_m2_p99": 136530921.7,
+      "crs": "EPSG:4326"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA1",
+      "hazard_field": "HAZ",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 54.307,
+      "area_m2_median": 15013585.3,
+      "area_m2_p99": 28131868.0,
+      "crs": "EPSG:4326"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA2",
+      "hazard_field": "HAZ",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 122.452,
+      "area_m2_median": 49406195.6,
+      "area_m2_p99": 50764089.3,
+      "crs": "EPSG:4326"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA3",
+      "hazard_field": "HAZ",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 190.038,
+      "area_m2_median": 56691860.7,
+      "area_m2_p99": 114013166.7,
+      "crs": "EPSG:4326"
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA4",
+      "hazard_field": "HAZ",
+      "rows": 3,
+      "null_hazard": 0,
+      "invalid_hazard_code": 0,
+      "hazard_codes_seen": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "null_or_empty_geom": 0,
+      "invalid_geom": 3,
+      "duplicate_geom": 0,
+      "slivers_lt_1m2": 0,
+      "area_km2_total": 238.668,
+      "area_m2_median": 40339038.5,
+      "area_m2_p99": 182996523.1,
+      "crs": "EPSG:4326"
+    }
+  ],
+  "raw_flood_class_distribution": [
+    {
+      "scenario": "5yr",
+      "level": "Low",
+      "polygons": 1,
+      "area_km2": 93.53996930770492
+    },
+    {
+      "scenario": "5yr",
+      "level": "Medium",
+      "polygons": 1,
+      "area_km2": 136.9579204991488
+    },
+    {
+      "scenario": "5yr",
+      "level": "High",
+      "polygons": 1,
+      "area_km2": 115.6079828619338
+    },
+    {
+      "scenario": "25yr",
+      "level": "Low",
+      "polygons": 1,
+      "area_km2": 91.8940563681911
+    },
+    {
+      "scenario": "25yr",
+      "level": "Medium",
+      "polygons": 1,
+      "area_km2": 141.20074784612257
+    },
+    {
+      "scenario": "25yr",
+      "level": "High",
+      "polygons": 1,
+      "area_km2": 165.85084436156902
+    },
+    {
+      "scenario": "100yr",
+      "level": "Low",
+      "polygons": 1,
+      "area_km2": 167.11113396905247
+    },
+    {
+      "scenario": "100yr",
+      "level": "Medium",
+      "polygons": 1,
+      "area_km2": 313.7026730749577
+    },
+    {
+      "scenario": "100yr",
+      "level": "High",
+      "polygons": 1,
+      "area_km2": 355.142323187094
+    }
+  ],
+  "power_raw_shape": [
+    234388,
+    8
+  ],
+  "power_raw_date_range": [
+    "1981-01-01",
+    "2026-11-02"
+  ],
+  "power_raw_missing": {
+    "PRECTOTCORR": {
+      "fill_value_count": 0,
+      "pct": 0.0
+    },
+    "T2M": {
+      "fill_value_count": 0,
+      "pct": 0.0
+    },
+    "RH2M": {
+      "fill_value_count": 0,
+      "pct": 0.0
+    }
+  },
+  "power_raw_bad_dates": 0,
+  "power_raw_duplicate_lgu_date": 0,
+  "power_gap_profile_totals": {
+    "PRECTOTCORR": {
+      "trailing_missing": 0,
+      "interior_missing": 0
+    },
+    "RH2M": {
+      "trailing_missing": 0,
+      "interior_missing": 0
+    },
+    "T2M": {
+      "trailing_missing": 0,
+      "interior_missing": 0
+    }
+  },
+  "power_distinct_rain_series": 3,
+  "power_cell_groups": [
+    [
+      "Botolan",
+      "Cabangan",
+      "Castillejos",
+      "Olongapo",
+      "San Antonio",
+      "San Felipe",
+      "San Marcelino",
+      "San Narciso",
+      "Subic"
+    ],
+    [
+      "Candelaria",
+      "Iba",
+      "Masinloc",
+      "Palauig"
+    ],
+    [
+      "Santa Cruz"
+    ]
+  ],
+  "power_raw_describe_all": {
+    "PRECTOTCORR": {
+      "count": 234388.0,
+      "mean": 7.087,
+      "std": 15.294,
+      "min": 0.0,
+      "25%": 0.08,
+      "50%": 1.23,
+      "75%": 6.91,
+      "max": 274.81
+    },
+    "T2M": {
+      "count": 234388.0,
+      "mean": 26.929,
+      "std": 1.589,
+      "min": 18.94,
+      "25%": 25.94,
+      "50%": 26.96,
+      "75%": 27.91,
+      "max": 32.06
+    },
+    "RH2M": {
+      "count": 234388.0,
+      "mean": 79.085,
+      "std": 8.373,
+      "min": 53.47,
+      "25%": 72.55,
+      "50%": 80.46,
+      "75%": 85.93,
+      "max": 95.38
+    }
+  },
+  "power_wet_day_share_pct": 52.45,
+  "cleaning_log_noah": [
+    {
+      "kind": "flood",
+      "scenario": "100yr",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 2,
+      "drop_slivers": 91,
+      "rows_out": 449447,
+      "area_km2_out": 835.956
+    },
+    {
+      "kind": "flood",
+      "scenario": "25yr",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 0,
+      "drop_slivers": 13,
+      "rows_out": 145059,
+      "area_km2_out": 398.946
+    },
+    {
+      "kind": "flood",
+      "scenario": "5yr",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 0,
+      "drop_slivers": 10,
+      "rows_out": 138903,
+      "area_km2_out": 346.106
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA1",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 0,
+      "drop_slivers": 237,
+      "rows_out": 10664,
+      "area_km2_out": 54.307
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA2",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 0,
+      "drop_slivers": 106,
+      "rows_out": 11840,
+      "area_km2_out": 122.452
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA3",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 0,
+      "drop_slivers": 58,
+      "rows_out": 11545,
+      "area_km2_out": 190.038
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA4",
+      "rows_in": 3,
+      "drop_bad_hazard": 0,
+      "repaired_invalid": 3,
+      "drop_empty": 0,
+      "drop_duplicate_geom": 0,
+      "drop_slivers": 45,
+      "rows_out": 11186,
+      "area_km2_out": 238.668
+    }
+  ],
+  "power_range_flags": {
+    "PRECTOTCORR_negative": 0,
+    "PRECTOTCORR_gt_plausible": 0,
+    "T2M_out_10_45C": 0,
+    "RH2M_out_0_100": 0
+  },
+  "power_rows_dropped_dup_or_baddate": 0,
+  "power_clean_end_date": "2026-11-02",
+  "imputation_summary": {
+    "PRECTOTCORR": {
+      "missing_before": 0,
+      "imputed": 0,
+      "still_missing": 0
+    },
+    "T2M": {
+      "missing_before": 0,
+      "imputed": 0,
+      "still_missing": 0
+    },
+    "RH2M": {
+      "missing_before": 0,
+      "imputed": 0,
+      "still_missing": 0
+    }
+  },
+  "integration_outside_aoi_km2": {
+    "flood_100yr": 0.0,
+    "flood_25yr": 0.0,
+    "flood_5yr": 0.0,
+    "storm_surge_SSA1": 0.001,
+    "storm_surge_SSA2": 0.001,
+    "storm_surge_SSA3": 0.001,
+    "storm_surge_SSA4": 0.001
+  },
+  "integration_class_overlap_km2_max": 6.0402,
+  "lgu_features_shape": [
+    14,
+    36
+  ],
+  "transform_zero_variance_cols": [],
+  "reduction_dropped_redundant": [
+    "flood_100yr_any_pct",
+    "flood_25yr_any_pct",
+    "flood_25yr_low_pct",
+    "flood_25yr_medium_pct",
+    "flood_5yr_any_pct",
+    "flood_5yr_high_pct",
+    "flood_5yr_low_pct",
+    "rain_mean_annual_max1d_mm",
+    "rain_p95_wetday_mm",
+    "rain_wetseason_share_pct",
+    "rh2m_mean_pct",
+    "ss_ssa2_high_pct",
+    "ss_ssa3_high_pct",
+    "ss_ssa4_high_pct",
+    "ss_ssa4_medium_pct",
+    "t2m_mean_c"
+  ],
+  "reduction_corr_pairs": [
+    [
+      "flood_100yr_low_pct",
+      "flood_25yr_low_pct",
+      0.986
+    ],
+    [
+      "flood_100yr_low_pct",
+      "flood_5yr_low_pct",
+      0.96
+    ],
+    [
+      "flood_100yr_medium_pct",
+      "flood_25yr_medium_pct",
+      0.981
+    ],
+    [
+      "flood_100yr_medium_pct",
+      "flood_100yr_any_pct",
+      0.968
+    ],
+    [
+      "flood_25yr_high_pct",
+      "flood_5yr_high_pct",
+      0.988
+    ],
+    [
+      "flood_5yr_medium_pct",
+      "flood_5yr_any_pct",
+      0.976
+    ],
+    [
+      "flood_5yr_medium_pct",
+      "flood_25yr_any_pct",
+      0.968
+    ],
+    [
+      "ss_ssa1_medium_pct",
+      "ss_ssa2_high_pct",
+      0.972
+    ],
+    [
+      "ss_ssa2_low_pct",
+      "ss_ssa4_high_pct",
+      0.965
+    ],
+    [
+      "ss_ssa2_medium_pct",
+      "ss_ssa3_high_pct",
+      0.96
+    ],
+    [
+      "ss_ssa3_low_pct",
+      "ss_ssa4_medium_pct",
+      0.971
+    ],
+    [
+      "rain_mean_annual_mm",
+      "rain_mean_annual_max1d_mm",
+      0.993
+    ],
+    [
+      "rain_mean_annual_mm",
+      "rain_p95_wetday_mm",
+      0.963
+    ],
+    [
+      "rain_mean_annual_mm",
+      "t2m_mean_c",
+      0.977
+    ],
+    [
+      "rain_mean_annual_mm",
+      "rh2m_mean_pct",
+      0.974
+    ],
+    [
+      "rain_wetdays_per_year",
+      "rain_wetseason_share_pct",
+      1.0
+    ]
+  ],
+  "reduction_features_raw_vs_dissolved": [
+    21,
+    246
+  ],
+  "reduction_vertices_raw_vs_web": [
+    12137469,
+    7180978
+  ],
+  "before_after_noah": [
+    {
+      "kind": "flood",
+      "scenario": "5yr",
+      "rows_in": 3,
+      "rows_out": 138903,
+      "features_after_dissolve": 30
+    },
+    {
+      "kind": "flood",
+      "scenario": "25yr",
+      "rows_in": 3,
+      "rows_out": 145059,
+      "features_after_dissolve": 30
+    },
+    {
+      "kind": "flood",
+      "scenario": "100yr",
+      "rows_in": 3,
+      "rows_out": 449447,
+      "features_after_dissolve": 42
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA1",
+      "rows_in": 3,
+      "rows_out": 10664,
+      "features_after_dissolve": 36
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA2",
+      "rows_in": 3,
+      "rows_out": 11840,
+      "features_after_dissolve": 36
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA3",
+      "rows_in": 3,
+      "rows_out": 11545,
+      "features_after_dissolve": 36
+    },
+    {
+      "kind": "storm_surge",
+      "scenario": "SSA4",
+      "rows_in": 3,
+      "rows_out": 11186,
+      "features_after_dissolve": 36
+    }
+  ],
+  "hypothesis_tests": {
+    "H1": {
+      "n_lgu": 14,
+      "median_5yr": 2.8890774631082166,
+      "median_100yr": 7.886175650885913,
+      "median_diff_pp": 6.705764569571393,
+      "lgus_increased": 14,
+      "W": 105.0,
+      "p_one_sided": 6.103515625e-05
+    },
+    "H2": {
+      "n_months_wet": 276,
+      "n_months_dry": 274,
+      "median_wet_mm": 354.305,
+      "median_dry_mm": 21.511666666666663,
+      "U": 74454.0,
+      "p_one_sided": 2.2204632279660852e-86,
+      "rank_biserial": 0.9690574420818787
+    },
+    "H3": {
+      "Botolan": {
+        "years": 45,
+        "tau": 0.3191919191919192,
+        "p_two_sided": 0.001993405530846309,
+        "sen_slope_mm_per_decade": 16.58706766917293
+      },
+      "Candelaria": {
+        "years": 45,
+        "tau": 0.3373737373737373,
+        "p_two_sided": 0.001085805489087848,
+        "sen_slope_mm_per_decade": 13.705999999999998
+      },
+      "Santa Cruz": {
+        "years": 45,
+        "tau": 0.2909090909090909,
+        "p_two_sided": 0.004842804619659825,
+        "sen_slope_mm_per_decade": 14.321428571428578
+      }
+    },
+    "H4": {
+      "n_lgu": 14,
+      "rho": 0.25962611970152905,
+      "p_two_sided": 0.37005333670622587,
+      "lgus_with_ss4": 12
+    }
+  },
+  "inventory": [
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "flood",
+      "scenario": "100yr",
+      "source_path": "Flood/100yr/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Flood/100yr/Zambales.zip",
+      "bytes": 104224313,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "flood",
+      "scenario": "25yr",
+      "source_path": "Flood/25yr/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Flood/25yr/Zambales.zip",
+      "bytes": 38281281,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "flood",
+      "scenario": "5yr",
+      "source_path": "Flood/5yr/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Flood/5yr/Zambales.zip",
+      "bytes": 37420289,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "metadata",
+      "scenario": "-",
+      "source_path": "Flood/metadata_flood.txt",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Flood/metadata_flood.txt",
+      "bytes": 1546,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "metadata",
+      "scenario": "-",
+      "source_path": "NOAH_License.pdf",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/NOAH_License.pdf",
+      "bytes": 42365,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "storm_surge",
+      "scenario": "SSA1",
+      "source_path": "Storm Surge/StormSurgeAdvisory1/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Storm Surge/StormSurgeAdvisory1/Zambales.zip",
+      "bytes": 3496192,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "storm_surge",
+      "scenario": "SSA2",
+      "source_path": "Storm Surge/StormSurgeAdvisory2/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Storm Surge/StormSurgeAdvisory2/Zambales.zip",
+      "bytes": 4743680,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "storm_surge",
+      "scenario": "SSA3",
+      "source_path": "Storm Surge/StormSurgeAdvisory3/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Storm Surge/StormSurgeAdvisory3/Zambales.zip",
+      "bytes": 4936458,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "storm_surge",
+      "scenario": "SSA4",
+      "source_path": "Storm Surge/StormSurgeAdvisory4/Zambales.zip",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Storm Surge/StormSurgeAdvisory4/Zambales.zip",
+      "bytes": 4429082,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "Project NOAH (HF mirror)",
+      "kind": "metadata",
+      "scenario": "-",
+      "source_path": "Storm Surge/metadata_stormsurge.txt",
+      "url": "https://huggingface.co/datasets/bettergovph/project-noah-hazard-maps/resolve/main/Storm Surge/metadata_stormsurge.txt",
+      "bytes": 1676,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "geoBoundaries gbOpen",
+      "kind": "boundary",
+      "scenario": "ADM3",
+      "source_path": "National Mapping and Resource Information Authority (NAMRIA), Philippines Statistics Authority (PSA), OCHA Philippines",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PHL/ADM3/geoBoundaries-PHL-ADM3.geojson",
+      "bytes": 532129402,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "year_represented": "2020"
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Botolan",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.2324&longitude=120.2163&start=19810101&end=20261102&format=JSON",
+      "bytes": 834828,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Cabangan",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.1622&longitude=120.1167&start=19810101&end=20261102&format=JSON",
+      "bytes": 834828,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Candelaria",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.6271&longitude=120.0802&start=19810101&end=20261102&format=JSON",
+      "bytes": 834970,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Castillejos",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=14.9254&longitude=120.1781&start=19810101&end=20261102&format=JSON",
+      "bytes": 834827,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Iba",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.3517&longitude=120.0052&start=19810101&end=20261102&format=JSON",
+      "bytes": 834971,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Masinloc",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.5369&longitude=120.0741&start=19810101&end=20261102&format=JSON",
+      "bytes": 834971,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Olongapo",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=14.8254&longitude=120.3077&start=19810101&end=20261102&format=JSON",
+      "bytes": 834828,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Palauig",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.4524&longitude=120.0454&start=19810101&end=20261102&format=JSON",
+      "bytes": 834971,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "San Antonio",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=14.8585&longitude=120.1059&start=19810101&end=20261102&format=JSON",
+      "bytes": 834828,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "San Felipe",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.0776&longitude=120.1293&start=19810101&end=20261102&format=JSON",
+      "bytes": 834827,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "San Marcelino",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.0142&longitude=120.2991&start=19810101&end=20261102&format=JSON",
+      "bytes": 834828,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "San Narciso",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.0091&longitude=120.1197&start=19810101&end=20261102&format=JSON",
+      "bytes": 834827,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Santa Cruz",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=15.7761&longitude=120.028&start=19810101&end=20261102&format=JSON",
+      "bytes": 835327,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    },
+    {
+      "dataset": "NASA POWER daily (AG)",
+      "kind": "meteorology",
+      "scenario": "Subic",
+      "source_path": "temporal/daily/point",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR%2CT2M%2CRH2M&community=AG&latitude=14.8511&longitude=120.1751&start=19810101&end=20261102&format=JSON",
+      "bytes": 834828,
+      "retrieved_utc": "2026-11-16T07:00:19Z",
+      "license": NaN,
+      "year_represented": NaN
+    }
+  ]
+}

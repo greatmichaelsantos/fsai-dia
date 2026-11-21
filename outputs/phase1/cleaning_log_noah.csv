@@ -1,0 +1,8 @@
+kind,scenario,rows_in,drop_bad_hazard,repaired_invalid,drop_empty,drop_duplicate_geom,drop_slivers,rows_out,area_km2_out
+flood,100yr,3,0,3,0,2,91,449447,835.956
+flood,25yr,3,0,3,0,0,13,145059,398.946
+flood,5yr,3,0,3,0,0,10,138903,346.106
+storm_surge,SSA1,3,0,3,0,0,237,10664,54.307
+storm_surge,SSA2,3,0,3,0,0,106,11840,122.452
+storm_surge,SSA3,3,0,3,0,0,58,11545,190.038
+storm_surge,SSA4,3,0,3,0,0,45,11186,238.668

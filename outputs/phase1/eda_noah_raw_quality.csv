@@ -1,0 +1,8 @@
+kind,scenario,hazard_field,rows,null_hazard,invalid_hazard_code,hazard_codes_seen,null_or_empty_geom,invalid_geom,duplicate_geom,slivers_lt_1m2,area_km2_total,area_m2_median,area_m2_p99,crs
+flood,100yr,Var,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,835.956,313702673.1,354313530.2,EPSG:4326
+flood,25yr,Var,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,398.946,141200747.8,165357842.4,EPSG:4326
+flood,5yr,Var,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,346.106,115607982.9,136530921.7,EPSG:4326
+storm_surge,SSA1,HAZ,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,54.307,15013585.3,28131868.0,EPSG:4326
+storm_surge,SSA2,HAZ,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,122.452,49406195.6,50764089.3,EPSG:4326
+storm_surge,SSA3,HAZ,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,190.038,56691860.7,114013166.7,EPSG:4326
+storm_surge,SSA4,HAZ,3,0,0,"[1.0, 2.0, 3.0]",0,3,0,0,238.668,40339038.5,182996523.1,EPSG:4326
